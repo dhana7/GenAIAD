@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createFromIconfontCN } from '@ant-design/icons';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -12,13 +13,17 @@ import {
     CalendarOutlined,
     LinkOutlined,
     MailOutlined,
-    SettingOutlined, SearchOutlined
+    SettingOutlined, SearchOutlined,
+    SendOutlined
   } from '@ant-design/icons';
   import Enlive from '../images/Enlive.png';
   import logo from '../images/logo.png'
-import { Layout, Menu, Button, theme, Avatar, Dropdown  } from 'antd';
+import { Layout, Menu, Button, theme, Avatar, Dropdown,Space    } from 'antd';
 import { Col, Row } from 'antd';
 const { Header, Sider, Content } = Layout;
+const IconFont = createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
+});
 const Landing = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -105,6 +110,7 @@ const Landing = () => {
         >
      
         </Header> */}
+       
         <Content
         className='h-100'
           style={{
@@ -113,16 +119,20 @@ const Landing = () => {
             // minHeight: 280,
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
+
             
           }}
         >
+         
             <Row>
-
-         <Input placeholder="Basic usage" />
+        <Space.Compact className='w-100 d-flex'>
+        <Input defaultValue="Combine input and button"  />
+      <Button type="primary" className='bg-primary d-flex justify-content-center align-items-center ' ><SendOutlined  /></Button>
+    </Space.Compact>
          </Row>
         </Content>
+     
       </Layout>
-      
     </Layout>
     
   );
