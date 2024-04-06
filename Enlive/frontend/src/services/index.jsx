@@ -47,7 +47,7 @@ const brx = new BRX(
 let brxObject = new BRK(v_chat_ittr1);
 
 // These are the names of the input vars set
-brxObject.input["image-text-input"].value = "create a poster for diary store which sells breads and milk";
+
 // brxObject.input["color2"].value = "red";
 
 /**
@@ -55,7 +55,8 @@ brxObject.input["image-text-input"].value = "create a poster for diary store whi
  * For each event during the execution, it logs the event.
  * Finally, it logs the final result of the execution.
  */
-export const Brx = async () =>
+export const Brx = async (text_input) =>
+brxObject.input["image-text-input"].value = text_input;
   await brx.execute(brxObject, (event) => {
     console.log("Inline Event...");
     console.log(event);
