@@ -20,6 +20,8 @@ import {
   import logo from '../images/logo.png'
 import { Layout, Menu, Button, theme, Avatar, Dropdown,Space    } from 'antd';
 import { Col, Row } from 'antd';
+import { Brx } from '../services';
+
 const { Header, Sider, Content } = Layout;
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
@@ -127,7 +129,7 @@ const Landing = () => {
             <Row>
         <Space.Compact className='w-100 d-flex'>
         <Input defaultValue="Combine input and button"  />
-      <Button type="primary" className='bg-primary d-flex justify-content-center align-items-center ' ><SendOutlined  /></Button>
+      <Button type="primary" className='bg-primary d-flex justify-content-center align-items-center ' onClick={() => {Brx()}}  ><SendOutlined  /></Button>
     </Space.Compact>
          </Row>
         </Content>
