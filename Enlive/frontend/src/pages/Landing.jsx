@@ -28,6 +28,18 @@ const IconFont = createFromIconfontCN({
 });
 const Landing = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [promptState,setPromptState] = useState('');
+
+  const handleInput= (e) => {
+    if (e.key === 'Enter') {
+      console.log("Enter key pressed! Input value:", e.target.value);
+    
+  };
+}
+  const handlePrompt = (e) => {
+    setPromptState(e.target.value);
+  };
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -125,11 +137,13 @@ const Landing = () => {
             
           }}
         >
-         
+         <Row className='h-100 d-block'>
+            <div></div>
+          </Row>
             <Row>
-        <Space.Compact className='w-100 d-flex'>
-        <Input defaultValue="Combine input and button"  />
-      <Button type="primary" className='bg-primary d-flex justify-content-center align-items-center ' onClick={() => {Brx()}}  ><SendOutlined  /></Button>
+        <Space.Compact className='w-100 d-flex  '>
+        <Input value={promptState} onChange={handlePrompt} onKeyPress={handleInput} defaultValue="Combine input and button"  />
+      <Button type="primary" className='bg-primary d-flex justify-content-center align-items-center ' onClick={() => {Brx(promptState)} } ><SendOutlined  /></Button>
     </Space.Compact>
          </Row>
         </Content>
