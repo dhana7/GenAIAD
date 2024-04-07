@@ -1,1 +1,2 @@
-https://www.figma.com/file/IhVtZXSNOsNPJ1o5tk1M84/OraHacksScreen-Designs?type=design&node-id=12%3A34&mode=design&t=rPjuDAKEQr8VleSQ-1
+Prototype: https://www.figma.com/proto/IhVtZXSNOsNPJ1o5tk1M84/OraHacksScreen-Designs?type=design&node-id=1-2&t=9x7xhMG0swxusAEM-1&scaling=contain&page-id=0%3A1&mode=design
+Designs: https://www.figma.com/file/IhVtZXSNOsNPJ1o5tk1M84/OraHacksScreen-Designs?type=design&node-id=12%3A34&mode=design&t=rPjuDAKEQr8VleSQ-1
