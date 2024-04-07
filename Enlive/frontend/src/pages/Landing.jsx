@@ -199,7 +199,7 @@ const Landing = () => {
                           </Avatar>
                           AI :
                         </div>
-                        <Image width={200} src={displayImage[index]} />{" "}
+                        <Image  height={200} width={200} src={displayImage[index]} />{" "}
                       </>
             }
                      
@@ -222,7 +222,8 @@ const Landing = () => {
                       </Col>
                       </Row>
                     }
-          <Row align={"bottom"} className="position-fixed w-81 d-flex h-88 justify-content-end">
+          <Row align={"bottom"} className="d-flex h-88">
+            <div className="d-flex position-fixed w-81 bg-white">
             <Space.Compact className="w-100 d-flex">
               <Input
                 value={promptState}
@@ -262,6 +263,7 @@ const Landing = () => {
                 <SendOutlined />
               </Button>
             </Space.Compact>
+            </div>
           </Row>
         </Content>
       </Layout>
