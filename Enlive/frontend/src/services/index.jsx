@@ -39,12 +39,7 @@ let v_chat_ittr1 = {
  * Initializing the BRX AI with the API key,
  * and turning on verbose mode for detailed logging.
  */
-const brx = new BRX(
-  process.env.REACT_APP_API_KEY,
-  { verbose: false }
-);
 
-let brxObject = new BRK(v_chat_ittr1);
 
 // These are the names of the input vars set
 
@@ -55,10 +50,22 @@ let brxObject = new BRK(v_chat_ittr1);
  * For each event during the execution, it logs the event.
  * Finally, it logs the final result of the execution.
  */
-export const Brx = async (text_input) =>
+export const Brx = async (text_input) =>{
+  var response;
+  var brxoutput;
+  const brx = new BRX(
+    "brxbe9e575af392087a7a389d543f729a2e6271eab38556f6de3b6c5475060e0eb1",
+    { verbose: false }
+  );
+  
+  let brxObject = new BRK(v_chat_ittr1);
 brxObject.input["image-text-input"].value = text_input;
-  await brx.execute(brxObject, (event) => {
+brxoutput = await brx.execute(brxObject, (event) => {
     console.log("Inline Event...");
     console.log(event);
+    response = event;
+    return event;
   });
 console.log("Final Result...");
+return JSON.parse(brxoutput[0].brxRes.output).url;
+}
