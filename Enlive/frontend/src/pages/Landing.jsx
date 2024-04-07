@@ -90,20 +90,30 @@ const Landing = () => {
           className='bg-primary'
           defaultSelectedKeys={['1']}
           items={[
-            getItem('Navigation Three', 'sub2', <SettingOutlined />, [
-                getItem('Option 7', '7'),
-                getItem('Option 8', '8'),
-                getItem('Option 9', '9'),
-                getItem('Option 10', '10'),
+            getItem('Find templates', 'sub2', <SettingOutlined />, [
+                getItem('Food', '7'),
+                getItem('Education', '8'),
+                getItem('Technology', '9'),
+                getItem('Bussiness', '10'),
+                getItem('Welness', '10'),
+                getItem('Sports', '10'),
               ]),
-              getItem('Navigation Three', 'sub2', <SettingOutlined />, [
-                getItem('Option 7', '7'),
-                getItem('Option 8', '8'),
-                getItem('Option 9', '9'),
-                getItem('Option 10', '10'),
-              ])
-          ]}
+              getItem('Previous creations', 'sub2', <SettingOutlined />, [
+                getItem('Get past 7 days', 'sub2', <SettingOutlined />,[
+                  getItem('Bakery shop', '8'),
+                getItem('Shop improvement', '9'),
+                ]),
+                getItem('Get past 30 days', 'sub2', <SettingOutlined />,[
+                  getItem('Media for bakery', '8'),
+                getItem('My shop', '9'),
+                ]),
+              ]),
+              // getItem('Past 7 days', 'sub2', <SettingOutlined />, [ ]),
+          ]          
+        }
+        
         />
+          {/* <Row><div className=''>Get past</div></Row> */}
         </Row>
         <Row>
         <Dropdown overlay={userMenu} trigger={['click']}>
