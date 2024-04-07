@@ -40,7 +40,7 @@ let v_chat_ittr1 = {
  * and turning on verbose mode for detailed logging.
  */
 const brx = new BRX(
-  "brxbe9e575af392087a7a389d543f729a2e6271eab38556f6de3b6c5475060e0eb1",
+  process.env.REACT_APP_API_KEY,
   { verbose: false }
 );
 
